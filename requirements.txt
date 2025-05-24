@@ -11,6 +11,7 @@ google-cloud-vision==3.10.1
 googleapis-common-protos==1.70.0
 grpcio==1.72.0rc1
 grpcio-status==1.72.0rc1
+gunicorn==23.0.0
 idna==3.10
 importlib_metadata==8.7.0
 itsdangerous==2.2.0
@@ -18,12 +19,14 @@ Jinja2==3.1.6
 MarkupSafe==3.0.2
 numpy==2.0.2
 opencv-python==4.11.0.86
+packaging==25.0
 pillow==11.2.1
 proto-plus==1.26.1
 protobuf==6.31.0
 pyasn1==0.6.1
 pyasn1_modules==0.4.2
 python-dateutil==2.9.0.post0
+python-dotenv==1.1.0
 pytz==2025.2
 regex==2024.11.6
 requests==2.32.3

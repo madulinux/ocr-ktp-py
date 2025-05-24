@@ -1,0 +1,20 @@
+# Docker Compose will automatically load environment variables from .env file
+services:
+  ocr-ktp-api:
+    build: .
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      # Mount Google Cloud credentials (if available)
+      - ${GOOGLE_APPLICATION_CREDENTIALS:-./credentials.json}:/tmp/credentials.json:ro
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/tmp/credentials.json
+      - PORT=${PORT}
+      - DEBUG=${DEBUG}
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${PORT}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

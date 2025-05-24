@@ -1,0 +1,33 @@
+# Virtual environment
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Credentials (for security)
+*.pem
+*.key
+*.crt
+*.json
+
+# Documentation
+README.md
+API_DOCUMENTATION.md
+
+# Logs
+*.log
